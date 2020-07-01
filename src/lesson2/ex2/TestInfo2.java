@@ -1,4 +1,4 @@
-package ex2;
+package lesson2.ex2;
 
 import java.sql.*;
 

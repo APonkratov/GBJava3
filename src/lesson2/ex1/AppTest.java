@@ -1,4 +1,4 @@
-package ex1;
+package lesson2.ex1;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,3 +1,4 @@
+package lesson2;
 
 public class BreakTime {
     static String i = "";

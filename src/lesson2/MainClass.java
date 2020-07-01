@@ -1,3 +1,5 @@
+package lesson2;
+
 import java.sql.*;
 
 public class MainClass {

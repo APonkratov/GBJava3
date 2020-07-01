@@ -12,9 +12,13 @@ public class ArrayHandler {
         String[] stringArray = {"aa", "bb", "cc"};
         Integer[] intArray = {1, 2, 3, 4, 5};
 
-        changeArrayMembers(stringArray, 0, 2);
-        changeArrayMembers(intArray, 0, 3);
+        swapElementsByIndex(stringArray, 0, 2);
+        swapElementsByIndex(intArray, 0, 3);
+        System.out.println(Arrays.toString(stringArray));
+        System.out.println(Arrays.toString(intArray));
 
+        swapElementsByValue(stringArray, "aa", "bb");
+        swapElementsByValue(intArray, 3, 4);
         System.out.println(Arrays.toString(stringArray));
         System.out.println(Arrays.toString(intArray));
 
@@ -26,7 +30,14 @@ public class ArrayHandler {
 
     }
 
-    public static <T> void changeArrayMembers(T[] array, int index1, int index2) {
+    public static <T> void swapElementsByValue(T[] array, T element1, T element2) {
+        int index1 = Arrays.asList(array).indexOf(element1);
+        int index2 = Arrays.asList(array).indexOf(element2);
+        array[index1] = element2;
+        array[index2] = element1;
+    }
+
+    public static <T> void swapElementsByIndex(T[] array, int index1, int index2) {
         int maxIndex = array.length - 1;
 
         if (index1 > maxIndex
